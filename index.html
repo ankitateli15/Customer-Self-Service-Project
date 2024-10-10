@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Customer Self-Service Portal</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!--Start of Tawk.to Script-->
+<!-- <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/66effdec4cbc4814f7dd2cb7/1i8cnfpl4';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script> -->
+    <!--End of Tawk.to Script-->
+    <header>
+        <h1>Insurance Customer Self-Service Portal</h1>
+    </header>
+
+    <main>
+        <section id="claim-form">
+            <h2>Submit a New Insurance Claim</h2>
+            <form id="submitClaimForm">
+                <label for="policyNumber">Policy Number:</label>
+                <input type="text" id="policyNumber" name="policyNumber" required>
+
+                <label for="incidentDate">Incident Date:</label>
+                <input type="date" id="incidentDate" name="incidentDate" required>
+
+                <label for="description">Incident Description:</label>
+                <textarea id="description" name="description" required></textarea>
+
+                <label for="fileUpload">Attach Files:</label>
+                <input type="file" id="fileUpload" name="fileUpload">
+
+                <button type="submit">Submit Claim</button>
+            </form>
+            <div id="formSuccessMessage" style="display:none;">Claim submitted successfully!</div>
+        </section>
+
+      
+        <section id="track-claims">
+            <h2>Track Your Claims</h2>
+            <table id="claimsTable">
+                <thead>
+                    <tr>
+                        <th>Claim Number</th>
+                        <th>Status</th>
+                        <th>Date Submitted</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CLM001</td>
+                        <td>In Review</td>
+                        <td>09/05/2024</td>
+                    </tr>
+                    <tr>
+                        <td>CLM002</td>
+                        <td>Approved</td>
+                        <td>08/25/2024</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+   
+        <section id="chatbot">
+            <h2>Chat with Us</h2>
+            <button id="openChatbot" onclick="openChat()">Chat with Us</button>
+        
+      
+            <div id="chatWindow" style="display:none; width: 350px; height: 430px; border: 1px solid #ccc;">
+                <iframe
+                    src="https://tawk.to/https://embed.tawk.to/66effdec4cbc4814f7dd2cb7/1i8cnfpl4"
+                    width="350" height="430" frameborder="0">
+                </iframe>
+            </div>
+        </section>
+        
+
+
+
+        <!-- <section id="chatbot">
+            <h2>Chat with Us</h2>
+            <iframe  src="https://console.dialogflow.com/api-client/demo/embedded/YOUR_DIALOGFLOW_PROJECT_ID"
+                width="350" height="430" frameborder="0">
+            </iframe>
+        </section> -->
+
+        <!-- Search Knowledge Base -->
+        <section id="knowledge-base">
+            <h2>Search Knowledge Base</h2>
+            <input type="text" id="searchQuery" placeholder="Search for FAQs">
+            <div id="searchResults"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
